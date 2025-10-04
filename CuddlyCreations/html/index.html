@@ -1,227 +1,359 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CuddlyCreations</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CuddlyCreations</title>
-  <link rel="stylesheet" href="../css/style.css">
-</head>
+  <body>
+    <!-- Intro Section -->
+    <div id="intro-div">
+      <nav id="intro-nav">
+        <div class="nav-left">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#" id="contact-nav">Contact Us</a></li>
+            <li><a href="#">Kids Essentials</a></li>
+          </ul>
+        </div>
+        <div class="nav-right">
+          <button class="login-btn">Login</button>
+        </div>
+      </nav>
 
-<body>
-  <!-- Intro Section -->
-  <div id="intro-div">
-   <nav id="intro-nav">
-  <div class="nav-left">
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About Us</a></li>
-      <li><a href="#">Contact Us</a></li>
-      <li><a href="#">Kids Essentials</a></li>
-    </ul>
-  </div>
-  <div class="nav-right">
-    <button class="login-btn">Login</button>
-  </div>
-</nav>
+      <div class="intro-container">
+        <div class="intro-heading">
+          <h1>CuddlyCreations</h1>
+        </div>
 
+        <div class="intro-content">
+          <p>
+            "Discover a world of warmth and joy with our enchanting collection
+            of soft toys. At CuddlyCreations, we bring you a delightful
+            assortment of cuddly companions crafted with love and care."
+          </p>
+        </div>
 
-    <div class="intro-container">
-      <div class="intro-heading">
-        <h1>CuddlyCreations</h1>
-      </div>
-
-      <div class="intro-content">
-        <p>
-          "Discover a world of warmth and joy with our enchanting collection of soft toys. At CuddlyCreations,
-          we bring you a delightful assortment of cuddly companions crafted with love and care."
-        </p>
-      </div>
-
-      <button class="btn">Know more</button>
-    </div>
-  </div>
-
-  <!-- Card Section -->
-  <div class="card-container">
-    <div class="card-heading">
-      <h1>Soft-Toys</h1>
-    </div>
-
-    <div class="cards">
-      <div class="card">
-        <div class="pic">
-          <img class="img-margin" src="../images/card1.png" width="200" height="250">
-        </div>
-        <div class="card-title">
-          <h3>Teddy Bear</h3>
-        </div>
-        <div class="card-content">
-          Embrace the warmth of our delightful teddy bear collection at CuddlyCreations. Soft, huggable, and crafted with love—perfect companions for all ages.
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="pic">
-          <img class="img-margin" src="../images/card2.png" width="200" height="250">
-        </div>
-        <div class="card-title">
-          <h3>Elephant</h3>
-        </div>
-        <div class="card-content">
-          Welcome to the world of enchanting soft toys, where our elephant plushies steal the show! Huggable and crafted for comfort & joy.
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="pic">
-          <img class="img-margin" src="../images/card3.png" width="200" height="250">
-        </div>
-        <div class="card-title">
-          <h3>Unicorn</h3>
-        </div>
-        <div class="card-content">
-          Step into a world of enchantment with our charming unicorn soft toys. Crafted to bring imagination and happiness to life.
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Slider Section -->
-  <div class="customize-container">
-    <div class="slider">
-      <div class="card-s">
-        <div class="pic">
-          <img id="slider-img" class="img-margin" src="../images/card1.png" width="200" height="250">
-        </div>
-        <div class="card-title">
-          <h3 id="slider-heading">Teddy Bear</h3>
-        </div>
-        <button onclick="change()" id="nxt-button">Next</button>
+        <button class="btn">Know more</button>
       </div>
     </div>
 
-    <!-- Customize Form -->
-    <div class="customize">
-      <div class="type">
-        <label class="label">Type of Soft-Toy:</label>
-        <select class="input-type">
-          <option>Unicorn</option>
-          <option>Teddy Bear</option>
-          <option>Elephant</option>
-          <option>Giraffe</option>
-        </select>
+    <!-- Card Section -->
+    <div class="card-container">
+      <div class="card-heading">
+        <h1>Soft-Toys</h1>
       </div>
 
-      <div class="quantity">
-        <label class="label" for="quantity">Quantity:</label>
-        <input class="input-qt" type="number" id="quantity" name="quantity" value="1" min="1">
-      </div>
-
-      <div class="address">
-        <label class="label" for="address">Address:</label>
-        <input class="input-add" type="text" id="address">
-      </div>
-
-      <button class="btn">Submit</button>
-    </div>
-  </div>
-
-  <!-- Display Section -->
-  <div class="display-container">
-    <div class="display-options">
-      <button onclick="changeD1()">Teddy Bear</button>
-      <button onclick="changeD3()">Giraffe</button>
-      <button onclick="changeD2()">Elephant</button>
-    </div>
-
-    <div class="display-card">
-      <div class="card-s width-change">
-        <div class="pic">
-          <img id="display-img1" class="img-margin" src="../images/card1.png" width="200" height="250">
-        </div>
-        <button class="btn">Buy Now</button>
-      </div>
-    </div>
-
-    <div class="display-card">
-      <div class="card-s width-change">
-        <div class="pic">
-          <img id="display-img2" class="img-margin" src="../images/card1b.png" width="200" height="250">
-        </div>
-        <button class="btn">Buy Now</button>
-      </div>
-    </div>
-
-    <div class="display-card">
-      <div class="card-s width-change">
-        <div class="pic">
-          <img id="display-img3" class="img-margin" src="../images/card1c.png" width="200" height="250">
-        </div>
-        <button class="btn">Buy Now</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Best Selling Section -->
-  <div class="customize-container">
-    <div class="arrow-container">
-      <div class="intro-heading">
-        <h1>World's Best Selling <span>Soft-Toys</span></h1>
-      </div>
-
-      <div class="intro-content">
-        <p>
-          At CuddlyCreations, we take pride in offering an enchanting collection of soft toys that are not only delightful but also affordable. Explore our range and bring home lovable companions without breaking the bank.
-        </p>
-      </div>
-    </div>
-
-    <div class="card-s arrow-edit-container">
-      <div class="pic-d">
-        <div class="arrowleft">
-          <span onclick="changeL()" class="arrow" id="aleft">&#x2190;</span>
+      <div class="cards">
+        <div class="card">
+          <div class="pic">
+            <img
+              class="img-margin"
+              src="../images/card1.png"
+              width="200"
+              height="250"
+            />
+          </div>
+          <div class="card-title">
+            <h3>Teddy Bear</h3>
+          </div>
+          <div class="card-content">
+            Embrace the warmth of our delightful teddy bear collection at
+            CuddlyCreations. Soft, huggable, and crafted with love—perfect
+            companions for all ages.
+          </div>
         </div>
 
-        <img id="slider-imgP" class="img-margin" src="../images/card1.png" width="200" height="250">
+        <div class="card">
+          <div class="pic">
+            <img
+              class="img-margin"
+              src="../images/card2.png"
+              width="200"
+              height="250"
+            />
+          </div>
+          <div class="card-title">
+            <h3>Elephant</h3>
+          </div>
+          <div class="card-content">
+            Welcome to the world of enchanting soft toys, where our elephant
+            plushies steal the show! Huggable and crafted for comfort & joy.
+          </div>
+        </div>
 
-        <div class="arrowright">
-          <span onclick="changeR()" class="arrow" id="aright">&#x2192;</span>
+        <div class="card">
+          <div class="pic">
+            <img
+              class="img-margin"
+              src="../images/card3.png"
+              width="200"
+              height="250"
+            />
+          </div>
+          <div class="card-title">
+            <h3>Unicorn</h3>
+          </div>
+          <div class="card-content">
+            Step into a world of enchantment with our charming unicorn soft
+            toys. Crafted to bring imagination and happiness to life.
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-<!-- Footer Section -->
-<footer id="main-footer">
-  <div class="footer-container">
-    <div class="footer-left">
-      <h2>CuddlyCreations</h2>
-      <p>Bringing warmth and joy with every soft toy.</p>
-    </div>
-    <div class="footer-center">
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Contact Us</a></li>
-        <li><a href="#">Kids Essentials</a></li>
-      </ul>
-    </div>
-    <div class="footer-right">
-      <h3>Follow Us</h3>
-      <div class="social-icons">
-        <a href="#">&#xf09a;</a> <!-- Facebook icon -->
-        <a href="#">&#xf099;</a> <!-- Twitter icon -->
-        <a href="#">&#xf16d;</a> <!-- Instagram icon -->
+    <!-- Slider Section -->
+    <div class="customize-container">
+      <div class="slider">
+        <div class="card-s">
+          <div class="pic">
+            <img
+              id="slider-img"
+              class="img-margin"
+              src="../images/card1.png"
+              width="200"
+              height="250"
+            />
+          </div>
+          <div class="card-title">
+            <h3 id="slider-heading">Teddy Bear</h3>
+          </div>
+          <button onclick="change()" id="nxt-button">Next</button>
+        </div>
+      </div>
+
+      <!-- Customize Form -->
+      <div class="customize">
+        <div class="type">
+          <label class="label">Type of Soft-Toy:</label>
+          <select class="input-type">
+            <option>Unicorn</option>
+            <option>Teddy Bear</option>
+            <option>Elephant</option>
+            <option>Giraffe</option>
+          </select>
+        </div>
+
+        <div class="quantity">
+          <label class="label" for="quantity">Quantity:</label>
+          <input
+            class="input-qt"
+            type="number"
+            id="quantity"
+            name="quantity"
+            value="1"
+            min="1"
+          />
+        </div>
+
+        <div class="address">
+          <label class="label" for="address">Address:</label>
+          <input class="input-add" type="text" id="address" />
+        </div>
+
+        <button class="btn">Submit</button>
       </div>
     </div>
-  </div>
-  <div class="footer-bottom">
-    &copy; 2025 CuddlyCreations. All Rights Reserved.
-  </div>
-</footer>
 
-  <script src="../js/script.js"></script>
-</body>
+    <!-- Display Section -->
+    <div class="display-container">
+      <div class="display-options">
+        <button onclick="changeD1()">Teddy Bear</button>
+        <button onclick="changeD3()">Giraffe</button>
+        <button onclick="changeD2()">Elephant</button>
+      </div>
+
+      <div class="display-card">
+        <div class="card-s width-change">
+          <div class="pic">
+            <img
+              id="display-img1"
+              class="img-margin"
+              src="../images/card1.png"
+              width="200"
+              height="250"
+            />
+          </div>
+          <button class="btn">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="display-card">
+        <div class="card-s width-change">
+          <div class="pic">
+            <img
+              id="display-img2"
+              class="img-margin"
+              src="../images/card1b.png"
+              width="200"
+              height="250"
+            />
+          </div>
+          <button class="btn">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="display-card">
+        <div class="card-s width-change">
+          <div class="pic">
+            <img
+              id="display-img3"
+              class="img-margin"
+              src="../images/card1c.png"
+              width="200"
+              height="250"
+            />
+          </div>
+          <button class="btn">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Best Selling Section -->
+    <div class="customize-container">
+      <div class="arrow-container">
+        <div class="intro-heading">
+          <h1>World's Best Selling <span>Soft-Toys</span></h1>
+        </div>
+
+        <div class="intro-content">
+          <p>
+            At CuddlyCreations, we take pride in offering an enchanting
+            collection of soft toys that are not only delightful but also
+            affordable. Explore our range and bring home lovable companions
+            without breaking the bank.
+          </p>
+        </div>
+      </div>
+
+      <div class="card-s arrow-edit-container">
+        <div class="pic-d">
+          <div class="arrowleft">
+            <span onclick="changeL()" class="arrow" id="aleft">&#x2190;</span>
+          </div>
+
+          <img
+            id="slider-imgP"
+            class="img-margin"
+            src="../images/card1.png"
+            width="200"
+            height="250"
+          />
+
+          <div class="arrowright">
+            <span onclick="changeR()" class="arrow" id="aright">&#x2192;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer id="main-footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <h2>CuddlyCreations</h2>
+          <p>Bringing warmth and joy with every soft toy.</p>
+        </div>
+
+        <div class="footer-links">
+          <h3>Shop</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Kids Essentials</a></li>
+            <li><a href="#">Best Sellers</a></li>
+            <li><a href="#">New Arrivals</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-help">
+          <h3>Help</h3>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Shipping & Delivery</a></li>
+            <li><a href="#">Returns & Refunds</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="mailto:support@cuddlycreations.com">support@cuddlycreations.com</a></li>
+            <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+            <li><a href="#">221B Plush St, Toyland</a></li>
+            <li><a href="#" id="contact-footer">Open Contact Form</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter">
+          <h3>Newsletter</h3>
+          <p>Get cozy deals and new drops in your inbox.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault();">
+            <label class="visually-hidden" for="newsletterEmail">Email</label>
+            <input id="newsletterEmail" type="email" placeholder="Enter your email" required />
+            <button type="submit" class="btn">Subscribe</button>
+          </form>
+          <div class="social-icons" aria-label="Social links">
+            <a href="#" aria-label="Facebook">Facebook</a>
+            <a href="#" aria-label="Instagram">Instagram</a>
+            <a href="#" aria-label="Twitter">Twitter/X</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-legal">
+          <span>&copy; 2025 CuddlyCreations</span>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Contact Us</h2>
+          <span class="close" id="closeModal">&times;</span>
+        </div>
+        <div class="modal-body">
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="contactName">Name:</label>
+              <input type="text" id="contactName" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="contactEmail">Email:</label>
+              <input type="email" id="contactEmail" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="contactSubject">Subject:</label>
+              <input type="text" id="contactSubject" name="subject" required />
+            </div>
+            <div class="form-group">
+              <label for="contactMessage">Message:</label>
+              <textarea
+                id="contactMessage"
+                name="message"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn submit-btn">Send Message</button>
+              <button type="button" class="btn cancel-btn" id="cancelModal">
+                Cancel
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+  </body>
 </html>
